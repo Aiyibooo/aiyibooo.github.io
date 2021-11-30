@@ -36,3 +36,14 @@ cat ~/.ssh/id_rsa.pub
 Past the content to *~/.ssh/authorized_keys*.
 If the file does not exist, create it first.
 
+### Connect to Ubuntu on MacOS
+
+```
+ssh username@host
+```
+
+### Disconnect
+
+```
+exit
+```
