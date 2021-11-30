@@ -6,14 +6,14 @@
 <meta name=viewport content="width=device-width,minimum-scale=1">
 <meta name=description content="SSH to Ubuntu from mac Install ssh server on Ubuntu sudo apt install ssh Generate key on MacOS ssh-keygen Add public key to Ubuntu On MacOS Copy the flow command output
 cat ~/.ssh/id_rsa.pub On Ubuntu Past the content to ~/.ssh/authorized_keys. If the file does not exist, create it first.
-Connect to Ubuntu on MacOS ssh username@host Disconnect exit ">
+Connect to Ubuntu on MacOS ssh username@host Disconnect exit Use name for Ubuntu If you don&rsquo;t want to type ssh username@host, you can add a name for SSH server.">
 <meta name=generator content="Hugo 0.89.4">
 <meta name=ROBOTS content="NOINDEX, NOFOLLOW">
 <link rel=stylesheet href=/ananke/css/main.min.css>
 <meta property="og:title" content="SSH to Ubuntu from MacOS">
 <meta property="og:description" content="SSH to Ubuntu from mac Install ssh server on Ubuntu sudo apt install ssh Generate key on MacOS ssh-keygen Add public key to Ubuntu On MacOS Copy the flow command output
 cat ~/.ssh/id_rsa.pub On Ubuntu Past the content to ~/.ssh/authorized_keys. If the file does not exist, create it first.
-Connect to Ubuntu on MacOS ssh username@host Disconnect exit ">
+Connect to Ubuntu on MacOS ssh username@host Disconnect exit Use name for Ubuntu If you don&rsquo;t want to type ssh username@host, you can add a name for SSH server.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aiyibooo.github.io/posts/002_ssh_from_mac_to_ubuntu/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-11-30T13:59:40+08:00">
@@ -21,14 +21,14 @@ Connect to Ubuntu on MacOS ssh username@host Disconnect exit ">
 <meta itemprop=name content="SSH to Ubuntu from MacOS">
 <meta itemprop=description content="SSH to Ubuntu from mac Install ssh server on Ubuntu sudo apt install ssh Generate key on MacOS ssh-keygen Add public key to Ubuntu On MacOS Copy the flow command output
 cat ~/.ssh/id_rsa.pub On Ubuntu Past the content to ~/.ssh/authorized_keys. If the file does not exist, create it first.
-Connect to Ubuntu on MacOS ssh username@host Disconnect exit "><meta itemprop=datePublished content="2021-11-30T13:59:40+08:00">
+Connect to Ubuntu on MacOS ssh username@host Disconnect exit Use name for Ubuntu If you don&rsquo;t want to type ssh username@host, you can add a name for SSH server."><meta itemprop=datePublished content="2021-11-30T13:59:40+08:00">
 <meta itemprop=dateModified content="2021-11-30T13:59:40+08:00">
-<meta itemprop=wordCount content="58">
+<meta itemprop=wordCount content="159">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="SSH to Ubuntu from MacOS">
 <meta name=twitter:description content="SSH to Ubuntu from mac Install ssh server on Ubuntu sudo apt install ssh Generate key on MacOS ssh-keygen Add public key to Ubuntu On MacOS Copy the flow command output
 cat ~/.ssh/id_rsa.pub On Ubuntu Past the content to ~/.ssh/authorized_keys. If the file does not exist, create it first.
-Connect to Ubuntu on MacOS ssh username@host Disconnect exit ">
+Connect to Ubuntu on MacOS ssh username@host Disconnect exit Use name for Ubuntu If you don&rsquo;t want to type ssh username@host, you can add a name for SSH server.">
 </head>
 <body class="ma0 avenir bg-near-white">
 <header>
@@ -77,6 +77,28 @@ If the file does not exist, create it first.</p>
 <pre tabindex=0><code>ssh username@host
 </code></pre><h3 id=disconnect>Disconnect</h3>
 <pre tabindex=0><code>exit
+</code></pre><h2 id=use-name-for-ubuntu>Use name for Ubuntu</h2>
+<p>If you don&rsquo;t want to type <em>ssh username@host</em>, you can add a name for SSH server.</p>
+<h3 id=modify-ssh-config-on-macos>Modify SSH config on MacOS</h3>
+<p>Add the below content to <em>~/.ssh/config</em>. If the file does not exist, create it first.</p>
+<pre tabindex=0><code>Host xxx
+    Hostname x.x.x.x
+    User xxx
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+</code></pre><ul>
+<li>Replace &lsquo;xxx&rsquo; after Host to the name you want.</li>
+<li>Replace &lsquo;x.x.x.x&rsquo; fater Hostname to your Ubuntu IP address.</li>
+<li>Replace &lsquo;xxx&rsquo; after User to your Ubuntu username.</li>
+</ul>
+<p>For example</p>
+<pre tabindex=0><code>Host abc
+    Hostname 192.168.1.123
+    User louis
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+</code></pre><h3 id=connect-to-ubuntu-by-short-name-on-macos>Connect to Ubuntu by short name on MacOS</h3>
+<pre tabindex=0><code>ssh abc(the name after Host)
 </code></pre><ul class=pa0>
 </ul>
 <div class="mt6 instapaper_ignoref">
