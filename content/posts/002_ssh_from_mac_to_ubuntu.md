@@ -42,6 +42,8 @@ If the file does not exist, create it first.
 ssh username@host
 ```
 
+The host is your Ubuntu IP address or PC name.
+
 ### Disconnect
 
 ```
