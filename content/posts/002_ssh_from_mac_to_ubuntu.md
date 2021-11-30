@@ -33,5 +33,6 @@ cat ~/.ssh/id_rsa.pub
 
 #### On Ubuntu
 
-Past the content to *~/.ssh/authorized_keys*
+Past the content to *~/.ssh/authorized_keys*.
+If the file does not exist, create it first.
 
