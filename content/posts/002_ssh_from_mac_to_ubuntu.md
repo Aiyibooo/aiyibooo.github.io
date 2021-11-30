@@ -47,3 +47,39 @@ ssh username@host
 ```
 exit
 ```
+
+## Use name for Ubuntu
+
+If you don't want to type *ssh username@host*, you can add a name for SSH server.
+
+### Modify SSH config on MacOS
+
+Add the below content to *~/.ssh/config*. If the file does not exist, create it first.
+
+```
+Host xxx
+    Hostname x.x.x.x
+    User xxx
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+```
+
+- Replace 'xxx' after Host to the name you want.
+- Replace 'x.x.x.x' fater Hostname to your Ubuntu IP address.
+- Replace 'xxx' after User to your Ubuntu username.
+
+For example
+
+```
+Host abc
+    Hostname 192.168.1.123
+    User louis
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+```
+
+### Connect to Ubuntu by short name on MacOS
+
+```
+ssh abc(the name after Host)
+```
